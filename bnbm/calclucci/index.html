@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+</head>
+<body>
+	<label for="txtCurrentLucci">Current Lucci: </label><input id="txtCurrentLucci" type="text" value="0"/>
+	</br>
+	<label for="txtMaxLucci">Max Lucci: </label><input id="txtMaxLucci" type="text" value="7000"/>
+	</br>
+	<label for="txtTargetLucci">Lucci wants to reach: </label><input id="txtTargetLucci" type="text" value="6429" disabled/> <input id="chkAutoTarget" type="checkbox"><label for="chkAutoTarget">Auto</label>
+	</br>
+	---
+	</br>
+	<label for="txtSurvivalReward">Survival reward: </label><input id="txtSurvivalReward" type="text" value="570"/><input type="radio" name="rdbAds" id="rdbAdsSurvival" checked>
+	</br>
+	<label for="txtPangLandReward">PangLand reward: </label><input id="txtPangLandReward" type="text" value="400"/><input type="radio" name="rdbAds" id="rdbAdsPangLand">
+	</br>
+	<label for="txtNormalReward">Normal/AI reward: </label><input id="txtNormalReward" type="text" value="180"/>
+	</br>
+	</br>
+	<button type="button" onclick="calcLucci()">Calculate</button>
+	</br>
+	<textarea rows="10" cols="70" id="txtResult" disabled style="background-color:white"></textarea>
+	</br>
+	</br>
+	Sort:
+	</br>
+	<textarea rows="10" cols="70" id="txtSortResult" disabled style="background-color:white"></textarea>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$("#chkAutoTarget,#txtMaxLucci,#txtSurvivalReward,#txtPangLandReward,#rdbAdsSurvival,#rdbAdsPangLand").on("change", function (){
+			autoTarget();
+		});
+		$("#chkAutoTarget").click();
+	});
+	function autoTarget() {
+		if ($("#chkAutoTarget").prop("checked")) {
+			var autoTargetLucci = "0";
+			if ($("#rdbAdsSurvival").prop("checked")) { autoTargetLucci = parseFloat($("#txtMaxLucci").val(), 10) - parseFloat($("#txtSurvivalReward").val(), 10) - 1; }
+			else if ($("#rdbAdsPangLand").prop("checked")) { autoTargetLucci = parseFloat($("#txtMaxLucci").val(), 10) - parseFloat($("#txtPangLandReward").val(), 10) - 1; }
+			$("#txtTargetLucci").val(autoTargetLucci);
+			$('#txtTargetLucci').attr('value', autoTargetLucci);
+			$("#txtTargetLucci").prop('disabled', true);
+		}
+		else {
+			$("#txtTargetLucci").prop('disabled', false);
+		}
+	}
+	function calcLucci() {
+		//$("#txtResult").val("");
+		//$('#txtSortResult').val("");
+		var currentLucci = parseFloat($("#txtCurrentLucci").val(), 10),
+			maxLucci = parseFloat($("#txtMaxLucci").val(), 10),
+			targetLucci = parseFloat($("#txtTargetLucci").val(), 10),
+			survivalrw = parseFloat($("#txtSurvivalReward").val(), 10),
+			pangLandrw = parseFloat($("#txtPangLandReward").val(), 10),
+			normalrw = parseFloat($("#txtNormalReward").val(), 10);
+		//console.log(txtCurrentLucci);
+		//console.log(txtMaxLucci);
+		var s=0, p=0, n=0, finalLucci=currentLucci;
+		var last_s=0, last_p=0, last_n=0, last_Lc=0;
+		var ret = true;
+		var resultText = "";
+		var objResult = [];
+		if (finalLucci <= targetLucci) {
+			for (s = 0; s <= 100; s++) {
+				for (p = 0; p <= 100; p++) {
+					for (n = 0; n <= 100; n++) {
+						tempLc = currentLucci + survivalrw*s + pangLandrw*p + normalrw*n;
+						finalLucci = tempLc;
+						if (finalLucci > targetLucci) {
+							if ((last_s > 0 ||  last_p > 0 || last_n > 0) && ret == true) {
+								resultText = resultText + "Survival: " + last_s + ", PangLand: " + last_p + ", Normal: " + last_n + ". Final Lucci: " + last_Lc + "\r\n";
+								//$("#txtResult").val($("#txtResult").val() + "PangLand: " + last_p + ", Normal: " + last_n + ", Survival " + last_s +". Final Lucci: " + last_Lc + "\r\n");
+								objResult.push({s:last_s,p:last_p,n:last_n,finalLucci:last_Lc});
+								ret = false;
+								break;
+							}
+						}
+						else {
+							ret = true;
+							last_s = s;
+							last_p = p;
+							last_n = n;
+							last_Lc = tempLc;
+						}
+					}
+				}
+			}
+		}
+		$("#txtResult").val(resultText.trim());
+		//console.log(objResult);
+		objResult.sort(function(a, b) {
+			return parseFloat(b.finalLucci) - parseFloat(a.finalLucci);
+		});
+		//console.log(objResult);
+		//objResult = objResult.slice(0,5);
+		//console.log(objResult);
+		//$('#txtSortResult').val(JSON.stringify(objResult));
+		$('#txtSortResult').val(function (){
+			var value = "";
+			for (var i = 0; i <= objResult.length - 1; i++) {
+				value = value + "Survival: " + objResult[i].s.toString() + ", PangLand: " + objResult[i].p.toString() + ", Normal: " + objResult[i].n.toString() + ". Final Lucci: " + objResult[i].finalLucci.toString() + "\r\n";
+			}
+			return value;
+		});
+	}
+	</script>
+</body>
+</html>
