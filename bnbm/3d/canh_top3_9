@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cánh top 3 mùa 9</title>
+  <script src="https://cdn.babylonjs.com/viewer/babylon.viewer.js"></script>
+</head>
+<body>
+    <babylon model="https://raw.githubusercontent.com/caohanh1502/caohanh1502.github.io/master/bnbm/3d/files/prefab_bodyrear_rankwing03_09.glb" templates.main.params.fill-screen="true"></babylon>
+</body>
+</html>
