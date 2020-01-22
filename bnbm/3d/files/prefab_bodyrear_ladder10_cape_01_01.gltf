@@ -1,0 +1,554 @@
+{
+    "asset": {
+        "generator": "FBX2glTF v0.9.7",
+        "version": "2.0"
+    },
+    "scene": 0,
+    "buffers": [
+        {
+            "byteLength": 13728,
+            "uri": "buffer.bin"
+        }
+    ],
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteLength": 324,
+            "byteOffset": 0
+        },
+        {
+            "buffer": 0,
+            "byteLength": 1296,
+            "byteOffset": 324
+        },
+        {
+            "buffer": 0,
+            "byteLength": 1296,
+            "byteOffset": 1620
+        },
+        {
+            "buffer": 0,
+            "byteLength": 52,
+            "byteOffset": 2916
+        },
+        {
+            "buffer": 0,
+            "byteLength": 208,
+            "byteOffset": 2968
+        },
+        {
+            "buffer": 0,
+            "byteLength": 208,
+            "byteOffset": 3176
+        },
+        {
+            "buffer": 0,
+            "byteLength": 936,
+            "byteOffset": 3384,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteLength": 1536,
+            "byteOffset": 4320,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 1536,
+            "byteOffset": 5856,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 2048,
+            "byteOffset": 7392,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 1024,
+            "byteOffset": 9440,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 1024,
+            "byteOffset": 10464,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 2048,
+            "byteOffset": 11488,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 192,
+            "byteOffset": 13536
+        }
+    ],
+    "scenes": [
+        {
+            "name": "Root Scene",
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "accessors": [
+        {
+            "componentType": 5126,
+            "type": "SCALAR",
+            "count": 81,
+            "bufferView": 0,
+            "byteOffset": 0,
+            "min": [
+                0.0
+            ],
+            "max": [
+                3.33333325386047
+            ]
+        },
+        {
+            "componentType": 5126,
+            "type": "VEC4",
+            "count": 81,
+            "bufferView": 1,
+            "byteOffset": 0
+        },
+        {
+            "componentType": 5126,
+            "type": "VEC4",
+            "count": 81,
+            "bufferView": 2,
+            "byteOffset": 0
+        },
+        {
+            "componentType": 5126,
+            "type": "SCALAR",
+            "count": 13,
+            "bufferView": 3,
+            "byteOffset": 0,
+            "min": [
+                0.0
+            ],
+            "max": [
+                0.5
+            ]
+        },
+        {
+            "componentType": 5126,
+            "type": "VEC4",
+            "count": 13,
+            "bufferView": 4,
+            "byteOffset": 0
+        },
+        {
+            "componentType": 5126,
+            "type": "VEC4",
+            "count": 13,
+            "bufferView": 5,
+            "byteOffset": 0
+        },
+        {
+            "componentType": 5123,
+            "type": "SCALAR",
+            "count": 468,
+            "bufferView": 6,
+            "byteOffset": 0
+        },
+        {
+            "componentType": 5126,
+            "type": "VEC3",
+            "count": 128,
+            "bufferView": 7,
+            "byteOffset": 0,
+            "min": [
+                -0.00223558978177607,
+                -0.00109152786899358,
+                -0.000316363817546517
+            ],
+            "max": [
+                0.00223558978177607,
+                0.00166945857927203,
+                0.00144377560354769
+            ]
+        },
+        {
+            "componentType": 5126,
+            "type": "VEC3",
+            "count": 128,
+            "bufferView": 8,
+            "byteOffset": 0
+        },
+        {
+            "componentType": 5126,
+            "type": "VEC4",
+            "count": 128,
+            "bufferView": 9,
+            "byteOffset": 0
+        },
+        {
+            "componentType": 5126,
+            "type": "VEC2",
+            "count": 128,
+            "bufferView": 10,
+            "byteOffset": 0
+        },
+        {
+            "componentType": 5123,
+            "type": "VEC4",
+            "count": 128,
+            "bufferView": 11,
+            "byteOffset": 0
+        },
+        {
+            "componentType": 5126,
+            "type": "VEC4",
+            "count": 128,
+            "bufferView": 12,
+            "byteOffset": 0
+        },
+        {
+            "componentType": 5126,
+            "type": "MAT4",
+            "count": 3,
+            "bufferView": 13,
+            "byteOffset": 0
+        }
+    ],
+    "images": [
+        {
+            "name": "tex_bodyrear_ladder10_cape_01.png",
+            "uri": "tex_bodyrear_ladder10_cape_01.png"
+        }
+    ],
+    "samplers": [
+        {}
+    ],
+    "textures": [
+        {
+            "name": "tex_bodyrear_ladder10_cape_01",
+            "sampler": 0,
+            "source": 0
+        }
+    ],
+    "materials": [
+        {
+            "name": "mat_bodyrear_ladder10_cape_01",
+            "alphaMode": "OPAQUE",
+            "extras": {
+                "fromFBX": {
+                    "shadingModel": "Phong",
+                    "isTruePBR": false
+                }
+            },
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 0,
+                    "texCoord": 0
+                },
+                "baseColorFactor": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "metallicFactor": 0.400000005960464,
+                "roughnessFactor": 0.301511347293854
+            }
+        }
+    ],
+    "meshes": [
+        {
+            "name": "bodyrear",
+            "primitives": [
+                {
+                    "material": 0,
+                    "mode": 4,
+                    "attributes": {
+                        "JOINTS_0": 11,
+                        "NORMAL": 8,
+                        "POSITION": 7,
+                        "TANGENT": 9,
+                        "TEXCOORD_0": 10,
+                        "WEIGHTS_0": 12
+                    },
+                    "indices": 6
+                }
+            ]
+        }
+    ],
+    "skins": [
+        {
+            "joints": [
+                6,
+                7,
+                5
+            ],
+            "inverseBindMatrices": 13,
+            "skeleton": 5
+        }
+    ],
+    "animations": [
+        {
+            "name": "anim_bodyrear_ladder10_cape_01_stand",
+            "channels": [
+                {
+                    "sampler": 0,
+                    "target": {
+                        "node": 6,
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": 1,
+                    "target": {
+                        "node": 7,
+                        "path": "rotation"
+                    }
+                }
+            ],
+            "samplers": [
+                {
+                    "input": 0,
+                    "interpolation": "LINEAR",
+                    "output": 1
+                },
+                {
+                    "input": 0,
+                    "interpolation": "LINEAR",
+                    "output": 2
+                }
+            ]
+        },
+        {
+            "name": "anim_bodyrear_ladder10_cape_01_walk",
+            "channels": [
+                {
+                    "sampler": 0,
+                    "target": {
+                        "node": 6,
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": 1,
+                    "target": {
+                        "node": 7,
+                        "path": "rotation"
+                    }
+                }
+            ],
+            "samplers": [
+                {
+                    "input": 3,
+                    "interpolation": "LINEAR",
+                    "output": 4
+                },
+                {
+                    "input": 3,
+                    "interpolation": "LINEAR",
+                    "output": 5
+                }
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "name": "RootNode",
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "children": [
+                1
+            ]
+        },
+        {
+            "name": "prefab_bodyrear_ladder10_cape_01_01",
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "children": [
+                2,
+                3
+            ]
+        },
+        {
+            "name": "bodyrear",
+            "translation": [
+                -7.22489130566828e-06,
+                -0.000499665038660169,
+                -0.000588477065321058
+            ],
+            "rotation": [
+                -0.707106590270996,
+                -1.68587448001745e-07,
+                -1.68587348525762e-07,
+                0.707106947898865
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "mesh": 0,
+            "skin": 0
+        },
+        {
+            "name": "dummyread",
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                -2.7616752618087e-07,
+                1.09672546386719e-05,
+                3.02879986716076e-12,
+                1.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "children": [
+                4
+            ]
+        },
+        {
+            "name": "com",
+            "translation": [
+                0.0,
+                -3.23117418615894e-31,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "children": [
+                5
+            ]
+        },
+        {
+            "name": "accbone_body",
+            "translation": [
+                -3.74959752136306e-09,
+                0.000935963762458414,
+                0.000171286956174299
+            ],
+            "rotation": [
+                7.72087059885962e-06,
+                0.70710676908493,
+                7.72087059885962e-06,
+                0.70710676908493
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "children": [
+                6
+            ]
+        },
+        {
+            "name": "accbone_00",
+            "translation": [
+                1.38096447699354e-05,
+                -0.000336607365170494,
+                1.54207835389997e-09
+            ],
+            "rotation": [
+                -5.0081198423868e-06,
+                1.33661333165946e-05,
+                -0.385631740093231,
+                0.922652781009674
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "children": [
+                7,
+                8
+            ]
+        },
+        {
+            "name": "accbone_01",
+            "translation": [
+                0.00139969913288951,
+                -4.76837146157205e-11,
+                1.48073012185002e-11
+            ],
+            "rotation": [
+                -1.45792045103121e-09,
+                1.10790550067463e-08,
+                0.258819073438644,
+                0.965925812721252
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        {
+            "name": "fx_acc",
+            "translation": [
+                0.00115000002551824,
+                0.0,
+                -4.23516464160819e-24
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        }
+    ]
+}
